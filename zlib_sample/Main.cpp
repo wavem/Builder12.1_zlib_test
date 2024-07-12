@@ -28,12 +28,36 @@ void __fastcall TFormMain::PrintMsg(UnicodeString _str) {
 
 void __fastcall TFormMain::btn_CompressClick(TObject *Sender)
 {
+	// Common
+	AnsiString t_FilePath = ed_Compress_Target_Path->Text;
+	AnsiString t_GZPath = ed_Compress_GZ_Path->Text;
+
+	// Pre-Return
+	if(t_FilePath == "" || t_GZPath == "") {
+		PrintMsg(L"Please Input File Path");
+		return;
+	}
+
+
+
+
+
 	PrintMsg(L"Compress Complete");
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TFormMain::btn_UnCompressClick(TObject *Sender)
 {
+	// Common
+	AnsiString t_FilePath = ed_Compress_Target_Path->Text;
+	AnsiString t_GZPath = ed_Compress_GZ_Path->Text;
+
+	// Pre-Return
+	if(t_FilePath == "" || t_GZPath == "") {
+		PrintMsg(L"Please Input File Path");
+		return;
+	}
+
 	PrintMsg(L"Un-Compress Complete");
 }
 //---------------------------------------------------------------------------
