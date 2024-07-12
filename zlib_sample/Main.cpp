@@ -4,9 +4,13 @@
 #pragma hdrstop
 
 #include "Main.h"
+#include "zlib.h"
+#include "zconf.h"
+#include <io.h>
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
+#pragma link "zlib.lib"
 TFormMain *FormMain;
 //---------------------------------------------------------------------------
 __fastcall TFormMain::TFormMain(TComponent* Owner)
